@@ -1,0 +1,27 @@
+{
+  "folders": [
+    {
+      "name": "0201 ArraySumCalculator",
+      "path": "practice/week-02/lab-0201-sum-of-array"
+    },
+    {
+      "name": "0202 StringCompare",
+      "path": "practice/week-02/lab-0202-string"
+    },
+    {
+      "name": "0203 DateTimePractice",
+      "path": "practice/week-02/lab-0203-date-time"
+    }
+  ],
+  "settings": {
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.import.gradle.wrapper.enabled": true,
+    "moodleVpl.courseId": 4
+  },
+  "extensions": {
+    "recommendations": [
+      "vscjava.vscode-java-pack",
+      "vscjava.vscode-gradle"
+    ]
+  }
+}

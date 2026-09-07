@@ -1,0 +1,55 @@
+{
+  "formatVersion": 1,
+  "site": "https://practice.leafmill.com",
+  "cmId": 129,
+  "courseId": 4,
+  "courseName": "플랫폼기반프로그래밍 (JDK 26)",
+  "name": "실습 0203 - Date-Time Operations",
+  "section": 17,
+  "sectionName": "17주차",
+  "projectName": "lab-0203-date-time-operations",
+  "mainClass": "DateTimePractice",
+  "remoteFingerprint": "61af0f7a78c2a741013473c24f243c286fcaae68f3dde3eac1ec0c199dec049e",
+  "learningAssetsFingerprint": "3481371d83a149b55969c23782f5e93f51228f1c5e79c9571b8524eb7d793ac2",
+  "requiredFiles": [
+    {
+      "name": "DateTimePractice.java",
+      "localPath": "src/main/java/DateTimePractice.java",
+      "remoteHash": "62469b3b906f7c554a6ec225d5444fe19748c01ca402b90eec37568647108aef"
+    }
+  ],
+  "publicAssets": {
+    "status": "available",
+    "source": "server",
+    "hasTests": true,
+    "files": [
+      {
+        "path": "examples/sample.in",
+        "sha256": "735dc34a197d6f6af0a3c5c1e0de62f3f4ee54319bd341778b6d71b9fdcd4e9b"
+      },
+      {
+        "path": "examples/sample.out",
+        "sha256": "9edf5dffd2c1625f64a10585374c35d00907b87c818d1ba7415767187547b6aa"
+      },
+      {
+        "path": "src/test/java/DateTimePracticeTest.java",
+        "sha256": "93b395c4b47bcf5f4367aa3c3afa884b739449b4eab0eed91d1cdfe15351a5a9"
+      },
+      {
+        "path": "src/test/java/ProgramRunner.java",
+        "sha256": "d5985b26851fc37f992dbf851aaff217a5d5c821e8b399ae03fd6435edca3ae5"
+      }
+    ]
+  },
+  "createdAt": "2026-09-07T06:46:43.223Z",
+  "updatedAt": "2026-09-07T06:46:43.223Z",
+  "generatedFiles": {
+    "build.gradle": "f4cddcd176ee7002add22acb4fed5a31134fcf39536d02242a9c7e0e6816bc55",
+    "settings.gradle": "81e44a896fd79506e99b9e6331d3b6f3be1e716db1aaf309c2e650216379555a",
+    ".vscode/launch.json": "3fc0c5b35ed3f29b739981c42d4439c3e3abaa689485c12e3a20a9a17ebc212a",
+    ".vscode/tasks.json": "b557e7dbd112658c9d265947e73077b2249a592cae9a881af3efc1d57e280f49",
+    ".vscode/extensions.json": "60cf1078a4d1e712f8af8f3401098cfef4e2a9a62e205d95977ee146de7962d5",
+    ".vscode/settings.json": "d950c64923d6f9f4a094b49069c4f5e1860561ff7e3881ec6dcaef6f143510eb",
+    "README.md": "e178314c67c5a979ba218c40d8f73fee8207897ea736525bb0c3fff0f6fa7e67"
+  }
+}

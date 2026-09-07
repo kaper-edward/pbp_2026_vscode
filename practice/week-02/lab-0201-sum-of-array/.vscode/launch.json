@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "현재 실습 실행",
+      "request": "launch",
+      "mainClass": "ArraySumCalculator",
+      "projectName": "lab-0201-sum-of-array",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "vmArgs": "-Duser.language=en -Duser.country=US"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+.gradle/
+build/
+*.class
+.DS_Store
+Thumbs.db
+.env
+.env.*
+*.pem
+*.key
+**/.moodle/*
+!**/.moodle/project.json
+!**/.moodle/remote.json
+.settings/
+.classpath
+.project
+bin/

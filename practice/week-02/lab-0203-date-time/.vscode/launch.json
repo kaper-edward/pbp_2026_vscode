@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "현재 실습 실행",
+      "request": "launch",
+      "mainClass": "DateTimePractice",
+      "projectName": "lab-0203-date-time-operations",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "vmArgs": "-Duser.language=en -Duser.country=US"
+    }
+  ]
+}

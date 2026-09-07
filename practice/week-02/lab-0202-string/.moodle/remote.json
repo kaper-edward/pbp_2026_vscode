@@ -1,0 +1,19 @@
+{
+  "fingerprint": "5f57c112b9d7ad203c483f041364c0f0fff3611907d61f8525f1d18e5c7b2435",
+  "problem": {
+    "id": 126,
+    "name": "실습 0202 - String",
+    "courseId": 4,
+    "courseName": "플랫폼기반프로그래밍 (JDK 26)",
+    "section": 17,
+    "sectionName": "17주차",
+    "intro": "<div class=\"no-overflow\"><section lang=\"ko\">\n<h2>0202 문자열 비교</h2>\n<p>두 줄의 문자열을 읽고 세 가지 방법으로 내용을 비교한다. 앞 문제의 메서드 분리를 문자열 처리에 적용한다.</p>\n<h3>Java 26 시작 코드</h3>\n<p><code>StringCompare.java</code>는 compact source file이다. 바깥 클래스 선언과 생성자 없이 <code>void main()</code>과 도우미 메서드를 작성한다. 제공된 파일명과 메서드 이름을 유지하고 학생 구현 부분의 TODO를 완성한다. 패키지 선언을 추가하지 않는다. Java 26에서 preview 옵션 없이 실행한다.</p>\n<h3>입력과 출력</h3>\n<ul><li><strong>입력:</strong> 문자열 두 개가 각각 한 줄로 주어진다. 문자열 안의 공백도 내용이므로 그대로 보존한다.</li>\n<li><strong>출력:</strong> [equals]: 결과. / [equalsIgnoreCase]: 결과. / [toLowerCase]: 결과.를 각각 한 줄로 출력한다. 결과는 소문자 true 또는 false이며 끝의 마침표를 유지한다.</li></ul>\n<h3>구현할 메서드</h3>\n<table><thead><tr><th>메서드</th><th>역할</th></tr></thead><tbody><tr><td><code>void main()</code></td><td>IO.readln()으로 두 줄을 읽고 아래 세 메서드를 순서대로 호출한다.</td></tr>\n<tr><td><code>void compareStrings(String s1, String s2)</code></td><td>대소문자를 구분하여 내용이 같은지 비교한 결과를 출력한다.</td></tr>\n<tr><td><code>void compareIgnoreCase(String s1, String s2)</code></td><td>대소문자를 무시하여 내용이 같은지 비교한 결과를 출력한다.</td></tr>\n<tr><td><code>void convertAndCompare(String s1, String s2)</code></td><td>두 번째 문자열만 소문자로 변환한 뒤 첫 번째 문자열과 대소문자를 구분하여 비교하고 결과를 출력한다.</td></tr></tbody></table>\n<h3>해결 아이디어</h3>\n<p>IO.readln()은 한 줄을 읽고 IO.println은 한 줄을 출력한다. String의 equals, equalsIgnoreCase, toLowerCase와 참조 비교 연산자 ==의 차이를 구별하자. 입력 안내 문구는 출력하지 않는다.</p>\n<h3>입출력 예</h3>\n<h3>sample-02.in</h3><table><thead><tr><th>입력</th><th>출력</th></tr></thead><tbody><tr><td><pre>hello world\nHELLO WORLD\n</pre></td><td><pre>[equals]: false.\n[equalsIgnoreCase]: true.\n[toLowerCase]: true.\n</pre></td></tr></tbody></table>\n<h3>sample.in</h3><table><thead><tr><th>입력</th><th>출력</th></tr></thead><tbody><tr><td><pre>java is easy\njAvA is eAsy\n</pre></td><td><pre>[equals]: false.\n[equalsIgnoreCase]: true.\n[toLowerCase]: true.\n</pre></td></tr></tbody></table>\n<h3>해결 확인 및 제출</h3>\n<p>프로젝트 폴더에서 <code>./gradlew classes</code>, <code>./gradlew test</code>, <code>./gradlew run &lt; examples/sample.in</code>을 사용한다. 시작 코드는 컴파일되지만 TODO가 비어 있으므로 공개 테스트는 실패한다. 구현 후 출력과 테스트 결과를 확인한다.</p>\n<p>제출 파일: <strong>StringCompare.java</strong>. 공개 테스트는 비공개 채점 전체를 대신하지 않는다.</p>\n</section>\n</div>",
+    "requiredFiles": [
+      {
+        "name": "StringCompare.java",
+        "contents": "void main() {\n    // TODO: IO.readln()으로 두 줄을 읽고 세 비교 메서드를 순서대로 호출한다.\n}\n\nvoid compareStrings(String s1, String s2) {\n    // TODO: 내용을 대소문자 구분하여 비교한 결과를 IO.println으로 출력한다.\n}\n\nvoid compareIgnoreCase(String s1, String s2) {\n    // TODO: 대소문자를 무시한 비교 결과를 IO.println으로 출력한다.\n}\n\nvoid convertAndCompare(String s1, String s2) {\n    // TODO: 두 번째 문자열만 소문자로 변환한 뒤 첫 번째 문자열과 비교하여 출력한다.\n}\n",
+        "encoding": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "formatVersion": 1,
+  "site": "https://practice.leafmill.com",
+  "cmId": 128,
+  "courseId": 4,
+  "courseName": "플랫폼기반프로그래밍 (JDK 26)",
+  "name": "실습 0201 - Sum of Array",
+  "section": 17,
+  "sectionName": "17주차",
+  "projectName": "lab-0201-sum-of-array",
+  "mainClass": "ArraySumCalculator",
+  "remoteFingerprint": "26ea99ba7d54a88f8d041b2724ec016e17159a909a64a0bbdbd2441ae0b01285",
+  "learningAssetsFingerprint": "31f9f2da4492a873665be7c314c43353934ab49eb98a426ba644c7c9c8df64b4",
+  "requiredFiles": [
+    {
+      "name": "ArraySumCalculator.java",
+      "localPath": "src/main/java/ArraySumCalculator.java",
+      "remoteHash": "eac11f96287add1618e1fc4cefac737f10c8b4c91b5c5b5b24b8d07436744d50"
+    }
+  ],
+  "publicAssets": {
+    "status": "available",
+    "source": "server",
+    "hasTests": true,
+    "files": [
+      {
+        "path": "examples/sample-02.in",
+        "sha256": "6b3272564201ddb9c9af54f753cb42a5c57b80c776cdd05f049d26c8695e2079"
+      },
+      {
+        "path": "examples/sample-02.out",
+        "sha256": "2ad2e709cbeaf760991090189cce3322e4648d35e70846436108b2aed5a0513b"
+      },
+      {
+        "path": "examples/sample.in",
+        "sha256": "32ae086129469c631aee3bfe9a0b77d03bcfd0d1b19bf18b1d58cc5c87212b04"
+      },
+      {
+        "path": "examples/sample.out",
+        "sha256": "b859aa7aca3e3492cca8c61d21df2a0ace889dfcceef77902e0fa3716f357f24"
+      },
+      {
+        "path": "src/test/java/ArraySumCalculatorTest.java",
+        "sha256": "b531bb80237e8f3ca26aad044096cc8ae729682db6d3badeab49ba140ddbe128"
+      },
+      {
+        "path": "src/test/java/ProgramRunner.java",
+        "sha256": "d5985b26851fc37f992dbf851aaff217a5d5c821e8b399ae03fd6435edca3ae5"
+      }
+    ]
+  },
+  "createdAt": "2026-09-07T06:46:43.197Z",
+  "updatedAt": "2026-09-07T06:46:43.197Z",
+  "generatedFiles": {
+    "build.gradle": "299bdb90be05b34d04f58caeeb21db30030f9f22082af257cc6056dc7451cca6",
+    "settings.gradle": "acc25d4fe1b41bd17a3f10f3d24cdc66a0b20d6c500a1ae72c4258f9a28a874b",
+    ".vscode/launch.json": "a189dbd8171eb22e939706c86cf76487442ed6172832e2708905b29de38c7c92",
+    ".vscode/tasks.json": "b557e7dbd112658c9d265947e73077b2249a592cae9a881af3efc1d57e280f49",
+    ".vscode/extensions.json": "60cf1078a4d1e712f8af8f3401098cfef4e2a9a62e205d95977ee146de7962d5",
+    ".vscode/settings.json": "d950c64923d6f9f4a094b49069c4f5e1860561ff7e3881ec6dcaef6f143510eb",
+    "README.md": "7b8c779050b3af8ef976520d5b74d0916e9fb48f21949d55249b524c206fe7b3"
+  }
+}

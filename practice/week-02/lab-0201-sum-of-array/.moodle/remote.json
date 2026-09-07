@@ -1,0 +1,19 @@
+{
+  "fingerprint": "26ea99ba7d54a88f8d041b2724ec016e17159a909a64a0bbdbd2441ae0b01285",
+  "problem": {
+    "id": 128,
+    "name": "실습 0201 - Sum of Array",
+    "courseId": 4,
+    "courseName": "플랫폼기반프로그래밍 (JDK 26)",
+    "section": 17,
+    "sectionName": "17주차",
+    "intro": "<div class=\"no-overflow\"><section lang=\"ko\">\n<h2>0201 배열의 합</h2>\n<p>정수 배열을 입력받고 합을 출력한다. 배열과 반복문을 활용하고 입력·계산·출력을 메서드로 나눈다.</p>\n<h3>Java 26 시작 코드</h3>\n<p><code>ArraySumCalculator.java</code>는 compact source file이다. 바깥 클래스 선언과 생성자 없이 <code>void main()</code>과 도우미 메서드를 작성한다. 제공된 파일명과 메서드 이름을 유지하고 학생 구현 부분의 TODO를 완성한다. 패키지 선언을 추가하지 않는다. Java 26에서 preview 옵션 없이 실행한다.</p>\n<h3>입력과 출력</h3>\n<ul><li><strong>입력:</strong> 첫 정수는 1 이상의 배열 크기이며 이어서 해당 개수의 정수 원소가 주어진다. 공백과 줄바꿈은 토큰 구분자로 사용한다. 합은 int 범위 안에 있다고 가정한다.</li>\n<li><strong>출력:</strong> Sum: 뒤에 공백 하나와 합계를 출력한다. 입력 안내 문구를 추가하지 않는다.</li></ul>\n<h3>구현할 메서드</h3>\n<table><thead><tr><th>메서드</th><th>역할</th></tr></thead><tbody><tr><td><code>void main()</code></td><td>입력 → 결과 출력 순서로 메서드를 호출한다.</td></tr>\n<tr><td><code>void inputNumbers()</code></td><td>제공된 Scanner로 크기와 원소를 읽어 numbers 배열을 초기화한다.</td></tr>\n<tr><td><code>int calculateSum()</code></td><td>모든 배열 원소의 합을 반환한다.</td></tr>\n<tr><td><code>void displaySum()</code></td><td>계산 결과를 지정된 형식으로 IO.println에 전달하여 출력한다.</td></tr></tbody></table>\n<h3>해결 아이디어</h3>\n<p>Scanner scanner와 int[] numbers 필드를 제공한다. 숫자 토큰 입력에는 Scanner를 사용하고, 출력에는 IO.println을 사용해 보자.</p>\n<h3>입출력 예</h3>\n<h3>sample-02.in</h3><table><thead><tr><th>입력</th><th>출력</th></tr></thead><tbody><tr><td><pre>3\n1 2 3\n</pre></td><td><pre>Sum: 6\n</pre></td></tr></tbody></table>\n<h3>sample.in</h3><table><thead><tr><th>입력</th><th>출력</th></tr></thead><tbody><tr><td><pre>5\n10 20 30 40 50\n</pre></td><td><pre>Sum: 150\n</pre></td></tr></tbody></table>\n<h3>해결 확인 및 제출</h3>\n<p>프로젝트 폴더에서 <code>./gradlew classes</code>, <code>./gradlew test</code>, <code>./gradlew run &lt; examples/sample.in</code>을 사용한다. 시작 코드는 컴파일되지만 TODO가 비어 있으므로 공개 테스트는 실패한다. 구현 후 출력과 테스트 결과를 확인한다.</p>\n<p>제출 파일: <strong>ArraySumCalculator.java</strong>. 공개 테스트는 비공개 채점 전체를 대신하지 않는다.</p>\n</section>\n</div>",
+    "requiredFiles": [
+      {
+        "name": "ArraySumCalculator.java",
+        "contents": "import java.util.Scanner;\n\nScanner scanner = new Scanner(System.in);\nint[] numbers;\n\nvoid main() {\n    // TODO: 입력 → 합계 출력 순서로 메서드를 호출한다.\n}\n\nvoid inputNumbers() {\n    // TODO: 배열 크기와 정수 원소를 읽어 numbers를 초기화한다.\n}\n\nint calculateSum() {\n    // TODO: 모든 배열 원소의 합을 반환한다.\n    return 0;\n}\n\nvoid displaySum() {\n    // TODO: IO.println으로 \"Sum: 합계\"를 출력한다.\n}\n",
+        "encoding": 0
+      }
+    ]
+  }
+}

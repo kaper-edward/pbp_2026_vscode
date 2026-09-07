@@ -1,0 +1,63 @@
+{
+  "formatVersion": 1,
+  "site": "https://practice.leafmill.com",
+  "cmId": 126,
+  "courseId": 4,
+  "courseName": "플랫폼기반프로그래밍 (JDK 26)",
+  "name": "실습 0202 - String",
+  "section": 17,
+  "sectionName": "17주차",
+  "projectName": "lab-0202-string",
+  "mainClass": "StringCompare",
+  "remoteFingerprint": "5f57c112b9d7ad203c483f041364c0f0fff3611907d61f8525f1d18e5c7b2435",
+  "learningAssetsFingerprint": "d12f8ae4d5afc0b5defbc8d2f3b0f6d310ee090bc417d0054836fb5d3b7cb9fb",
+  "requiredFiles": [
+    {
+      "name": "StringCompare.java",
+      "localPath": "src/main/java/StringCompare.java",
+      "remoteHash": "4058362d393bd5353ec5fa4ddee85348a7b0a6b1892bdb248e2aa50e28d23b95"
+    }
+  ],
+  "publicAssets": {
+    "status": "available",
+    "source": "server",
+    "hasTests": true,
+    "files": [
+      {
+        "path": "examples/sample-02.in",
+        "sha256": "33ffbb3656e9753b3a67bef3b1ec2c37829ecd0673cec9acbfdcfa72016562f9"
+      },
+      {
+        "path": "examples/sample-02.out",
+        "sha256": "e766febdc0de7d7e559aeb06e4f326644f5bc4948f08ee3f2f6d47dbc4ea0513"
+      },
+      {
+        "path": "examples/sample.in",
+        "sha256": "49f4a6b79d05b99476a198841f9fd5cb0dbb4fa0c680c74522c04ec27629eae6"
+      },
+      {
+        "path": "examples/sample.out",
+        "sha256": "e766febdc0de7d7e559aeb06e4f326644f5bc4948f08ee3f2f6d47dbc4ea0513"
+      },
+      {
+        "path": "src/test/java/ProgramRunner.java",
+        "sha256": "d5985b26851fc37f992dbf851aaff217a5d5c821e8b399ae03fd6435edca3ae5"
+      },
+      {
+        "path": "src/test/java/StringCompareTest.java",
+        "sha256": "fd0bca50c6502edaa248412465c0fa967ca06a5c414be7b18fbc6ba8e6ec9a3e"
+      }
+    ]
+  },
+  "createdAt": "2026-09-07T06:46:43.211Z",
+  "updatedAt": "2026-09-07T06:46:43.211Z",
+  "generatedFiles": {
+    "build.gradle": "bcd9a6075e295766bb61b1adbe7aeb9036f713eb018717dbf28bc680ae21d45f",
+    "settings.gradle": "4eb0d29947029a9d79e39c09262f63045b3a9817cd9e9b4ea734bac47e2d8bcd",
+    ".vscode/launch.json": "e2ea40197fe310917cc109854531820f857c6dfb6fd6298b10cf355ae286a068",
+    ".vscode/tasks.json": "b557e7dbd112658c9d265947e73077b2249a592cae9a881af3efc1d57e280f49",
+    ".vscode/extensions.json": "60cf1078a4d1e712f8af8f3401098cfef4e2a9a62e205d95977ee146de7962d5",
+    ".vscode/settings.json": "d950c64923d6f9f4a094b49069c4f5e1860561ff7e3881ec6dcaef6f143510eb",
+    "README.md": "b9cab6eaa94bab4fb0d50c6fe9c46ef2c8d5e48c5691142141b70be47fc21518"
+  }
+}

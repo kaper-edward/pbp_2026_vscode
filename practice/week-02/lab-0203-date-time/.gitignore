@@ -1,0 +1,5 @@
+.gradle/
+build/
+.moodle/*
+!.moodle/project.json
+!.moodle/remote.json

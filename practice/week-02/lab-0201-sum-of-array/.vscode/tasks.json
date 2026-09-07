@@ -1,0 +1,58 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Gradle: 컴파일",
+      "type": "process",
+      "command": "${workspaceFolder}/gradlew",
+      "args": [
+        "--console=plain",
+        "classes"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "windows": {
+        "command": "cmd.exe",
+        "args": [
+          "/d",
+          "/s",
+          "/c",
+          "gradlew.bat --console=plain classes"
+        ]
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": [
+        "$javac"
+      ]
+    },
+    {
+      "label": "Gradle: 공개 테스트",
+      "type": "process",
+      "command": "${workspaceFolder}/gradlew",
+      "args": [
+        "--console=plain",
+        "test"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "windows": {
+        "command": "cmd.exe",
+        "args": [
+          "/d",
+          "/s",
+          "/c",
+          "gradlew.bat --console=plain test"
+        ]
+      },
+      "group": "test",
+      "problemMatcher": [
+        "$javac"
+      ]
+    }
+  ]
+}
