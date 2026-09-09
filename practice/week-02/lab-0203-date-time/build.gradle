@@ -30,6 +30,11 @@ tasks.named('run', JavaExec) {
 
 tasks.named('test', Test) {
     useJUnitPlatform()
+    testLogging {
+        events 'passed', 'skipped', 'failed'
+        exceptionFormat = 'full'
+    }
+    outputs.upToDateWhen { false }
     failOnNoDiscoveredTests = true
     systemProperty 'practice.mainClass', application.mainClass.get()
     systemProperty 'practice.classpath', sourceSets.main.output.classesDirs.asPath

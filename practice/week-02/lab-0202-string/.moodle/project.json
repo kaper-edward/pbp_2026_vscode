@@ -52,7 +52,7 @@
   "createdAt": "2026-09-07T06:46:43.211Z",
   "updatedAt": "2026-09-07T06:46:43.211Z",
   "generatedFiles": {
-    "build.gradle": "bcd9a6075e295766bb61b1adbe7aeb9036f713eb018717dbf28bc680ae21d45f",
+    "build.gradle": "e2ca997c7ee9da54af6015f039ae2eba8c0087f115285df6558c65f3d284076b",
     "settings.gradle": "4eb0d29947029a9d79e39c09262f63045b3a9817cd9e9b4ea734bac47e2d8bcd",
     ".vscode/launch.json": "e2ea40197fe310917cc109854531820f857c6dfb6fd6298b10cf355ae286a068",
     ".vscode/tasks.json": "b557e7dbd112658c9d265947e73077b2249a592cae9a881af3efc1d57e280f49",

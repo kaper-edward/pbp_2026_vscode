@@ -32,10 +32,10 @@ Windows PowerShell, macOS 또는 Linux 터미널에서 실행합니다.
 ```text
 git clone https://github.com/kaper-edward/pbp_2026_vscode.git
 cd pbp_2026_vscode
-code pbp_2026.code-workspace
+code practice/week-02/lab-0201-sum-of-array
 ```
 
-`code` 명령을 사용할 수 없으면 VS Code의 **File → Open Workspace from File...**에서 `pbp_2026.code-workspace`를 엽니다. 저장소와 실행할 코드를 확인한 뒤 Workspace Trust 안내를 처리합니다. Java 프로젝트를 가져오는 작업이 끝날 때까지 기다립니다.
+`code` 명령을 사용할 수 없으면 VS Code의 **File → Open Folder...**에서 `practice/week-02/lab-0201-sum-of-array`를 엽니다. 여러 실습을 함께 보려면 **File → Open Workspace from File...**에서 `pbp_2026.code-workspace`를 선택할 수 있습니다. 이 경우 Java 프로젝트 3개를 가져옵니다. 저장소와 실행할 코드를 확인한 뒤 Workspace Trust 안내를 처리합니다. Java 프로젝트를 가져오는 작업이 끝날 때까지 기다립니다.
 
 | 실습 | 주제 | 프로젝트 |
 | --- | --- | --- |
@@ -88,23 +88,34 @@ Windows PowerShell의 대화형 실행은 위 Windows 명령을 사용합니다.
 
 ## 5. Moodle 연결과 제출
 
-동봉한 **Moodle VPL Practice 0.2.2**는 VS Code에서 문제 보기·로컬 실행·공개 테스트·Moodle 제출을 제공합니다. 저장소 루트의 `tools/moodle-vpl-practice-0.2.2.vsix`를 명령 팔레트의 **Extensions: Install from VSIX...**로 설치하고 창을 다시 로드합니다.
+동봉한 **Moodle VPL Practice 0.6.0**를 설치하면 VS Code에서 공개 테스트·Moodle 원격 실행·제출·채점을 진행할 수 있습니다. 아래 절차는 VS Code와 브라우저를 같은 컴퓨터에서 사용하는 데스크톱 환경 기준입니다.
 
-Windows PowerShell에서는 저장소 루트에서 다음 명령으로 설치할 수도 있습니다.
+### 확장 설치: 처음 한 번
 
-```powershell
-code --install-extension .\tools\moodle-vpl-practice-0.2.2.vsix
-```
+1. VS Code에서 **F1**을 누르고 `Install from VSIX`를 입력합니다.
+2. **Extensions: Install from VSIX...**를 선택합니다. 메뉴가 번역되어 검색되지 않으면 왼쪽 **Extensions** 아이콘 → **…** → **Install from VSIX...**를 선택합니다.
+3. 파일 선택 창에서 이 저장소의 [`tools/moodle-vpl-practice-0.6.0.vsix`](tools/moodle-vpl-practice-0.6.0.vsix)를 선택합니다.
+4. 설치가 끝나면 F1 → **Developer: Reload Window**를 실행합니다. F1에서 `Moodle`을 검색하여 아래 명령이 나타나는지 확인합니다. Extensions 화면에서 **Moodle VPL Practice** 버전이 **0.6.0**인지 확인할 수 있습니다.
 
-1. **Moodle VPL: 로그인**을 실행합니다.
-2. 외부 브라우저의 [VS Code 연결 화면](https://practice.leafmill.com/local/vplpractice/connect.php)에서 본인의 수강 계정으로 로그인합니다.
-3. **연결 토큰 발급 → 연결 토큰 복사**를 누르고 VS Code 입력창에 붙여 넣습니다. 토큰은 7일 동안 유효하며 본인만 사용합니다.
-4. 준비된 실습의 Java 파일을 열어 구현하고 저장합니다. **Moodle VPL: 현재 실습 제출**에서 계정·문제·파일을 확인하고 제출합니다.
-5. **Moodle VPL: 제출한 코드 채점**으로 서버에 마지막으로 저장된 코드를 채점합니다. 수정했다면 먼저 다시 제출합니다.
+터미널을 선호하면 저장소 루트에서 `code --install-extension tools/moodle-vpl-practice-0.6.0.vsix`로 설치한 뒤 창을 다시 로드해도 됩니다.
 
-사이트는 `https://practice.leafmill.com`, 강좌 ID는 `4`로 설정되어 있습니다. 저장소의 세 실습은 이미 해당 활동에 연결되어 있습니다. 추가로 공개된 실습은 **Moodle VPL: 실습 다운로드**에서 선택할 수 있습니다.
+### 구현 → 테스트 → 제출·채점
 
-**Moodle VPL: Moodle에서 열기**로 웹 제출 내역을 확인합니다. 웹 편집기와 VS Code에서 동시에 제출하는 것은 피합니다. 문제 갱신 알림을 받으면 **Moodle VPL: 원격 문제 갱신**을 실행하고 충돌 안내를 확인합니다. 공개 테스트는 일부 동작을 확인하며, 최종 결과는 서버 채점으로 확인합니다.
+1. F1 → **Moodle VPL: Login**을 실행합니다. 열린 브라우저에서 본인 수강 계정으로 로그인하고 **Connect to VS Code**를 누릅니다. 키를 복사하거나 입력할 필요가 없으며 유효한 연결은 재사용합니다.
+2. 작업할 실습 폴더의 `src/main/java` 파일을 열고 TODO를 구현한 뒤 저장합니다. 이 저장소의 0201·0202·0203은 이미 Moodle 활동에 연결되어 있습니다.
+3. F1 → **Moodle VPL: Run Public Tests**로 현재 파일의 프로젝트를 테스트합니다. 테스트는 매번 실행하며, 통과하면 PASSED, 출력 불일치로 실패하면 기대값과 실제 출력을 터미널에 표시합니다. 시작 코드는 미완성이므로 실패하는 것이 정상입니다.
+4. 서버에서 입력하며 실행하려면 F1 → **Moodle VPL: Submit and Run on Moodle**을 선택합니다. 제출 확인 후 Moodle VPL을 거쳐 실행 서버에 연결되며 VS Code 터미널에 입력합니다. 이 명령은 코드를 제출하지만 채점하지 않습니다.
+5. 채점받으려면 F1 → **Moodle VPL: Submit and Grade**를 선택하고 계정·문제·제출 파일을 확인합니다. 제출 검증 후 서버 채점까지 이어지며 결과는 Moodle VPL 출력 창에 표시됩니다. **Open in Moodle**로 웹 제출 내역도 확인할 수 있습니다.
+
+연결되지 않은 기존 실습 폴더는 제출 과정에서 문제를 선택하여 연결합니다. 별도로 연결하려면 **Moodle VPL: Connect Current Folder**를 사용합니다. 작성한 코드를 다른 폴더로 복사할 필요가 없습니다. 공개 테스트 통과만으로 제출되지는 않으며, 최종 결과는 서버 채점으로 확인합니다. 웹 편집기와 VS Code에서 동시에 제출하는 것은 피합니다.
+
+### 새 문제와 기존 문제 변경
+
+사이트 기본값은 `https://practice.leafmill.com`, 강좌 ID는 `4`입니다. F1 → **Moodle VPL: Open Practice**에서 추가로 공개된 문제를 선택합니다. 처음에는 실습 보관 폴더를 선택하며, 새 문제를 내려받고 해당 실습 하나를 새 창으로 엽니다. 기존에 등록된 폴더는 그대로 엽니다. 교수가 외부 실습으로 등록한 문제 중 현재 계정으로 접근 가능한 문제만 표시됩니다.
+
+**Moodle VPL: Check for Updates**는 새 문제와 기존 문제 변경을 수동으로 확인합니다. 자동 주기 알림은 없으며, 기존 코드·테스트·예제·빌드 파일을 덮어쓰거나 삭제하지 않습니다.
+
+새 자료를 다시 받으려면 보관할 작업을 별도로 복사하고, 사용자가 기존 실습 폴더를 직접 삭제한 뒤 **Open Practice**에서 다시 다운로드합니다. 빈 폴더라도 다운로드 대상에 존재하면 거절됩니다. **How to Download Again**은 이 절차만 안내합니다.
 
 ## 6. 작업 파일과 문제 해결
 
@@ -117,7 +128,7 @@ code --install-extension .\tools\moodle-vpl-practice-0.2.2.vsix
 | JDK를 찾을 수 없다는 오류 | `JAVA_HOME`, `java -version`, **Java: Configure Java Runtime** 확인 |
 | Gradle 다운로드 실패 | 인터넷 연결을 확인하고 같은 명령 재실행 |
 | 클래스나 실행 구성을 찾지 못함 | Java 프로젝트 가져오기가 완료되었는지, 대상 실습이 맞는지 확인 |
-| 연결 토큰 만료 | **Moodle VPL: 로그인**에서 새 토큰으로 연결 |
+| 연결 토큰 만료 | **Moodle VPL: Login**에서 브라우저로 다시 연결 |
 | 제출 계정 또는 버전 충돌 | 본인 계정과 Moodle의 현재 제출 확인 |
 
 빌드 결과와 개인 제출 상태는 Git에서 제외됩니다. 토큰과 로그인 정보는 저장소에 넣지 않습니다. 과제 제출은 Moodle에서 수행하며 본인이 작성한 답안을 공개 저장소에 올리는 것은 수업의 제출·공유 규칙을 따릅니다.
