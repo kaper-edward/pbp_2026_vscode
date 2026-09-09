@@ -1,1 +1,1 @@
-85c97fa2dd5c097b28cd8cfa0dd9af91ffe150218f65a1c40c73abd410d2fa78  moodle-vpl-practice-0.6.2.vsix
+a3dead6458b1939e7543e2ef8d3f05084b285a636d8e2535194f23e63929255c  moodle-vpl-practice-0.6.3.vsix

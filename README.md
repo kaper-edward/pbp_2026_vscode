@@ -4,6 +4,15 @@
 
 각 실습은 독립된 Gradle 프로젝트입니다. 로컬 컴파일·실행·테스트는 Moodle 로그인 없이 사용할 수 있고, 수강 계정으로 연결하면 VS Code에서 Moodle에 제출할 수 있습니다.
 
+> **실습환경을 처음 구성한다면 [INSTALL.md](INSTALL.md)를 먼저 읽으세요.** OS별 JDK·PATH 설정, VS Code 확장 설치, 최초 빌드, Moodle 연결과 문제 해결을 순서대로 안내합니다. **에이전트는 실습환경 구성 요청을 받으면 이 문서를 참조하고, 실제 확인 결과와 남은 사용자 작업을 보고하세요.**
+
+에이전트에게는 다음처럼 요청할 수 있습니다.
+
+```text
+INSTALL.md를 읽고 이 저장소의 Java 26 실습환경을 구성해 주세요.
+기존 설치와 작성한 코드를 보존하고, 컴파일 결과와 제가 직접 해야 할 작업을 알려 주세요.
+```
+
 ## 1. 준비
 
 다음 프로그램을 설치합니다.
@@ -12,6 +21,8 @@
 - [Visual Studio Code](https://code.visualstudio.com/download)
 - JDK 26
 - VS Code 확장 **Extension Pack for Java**(Microsoft)
+
+**Gradle for Java**는 작업 탐색 UI를 위한 권장 확장입니다. Moodle 명령을 사용하려면 동봉한 **Moodle VPL Practice 0.6.3 VSIX**를 별도로 설치합니다. Git clone이나 추천 확장 목록만으로 Moodle 확장이 자동 설치되지는 않습니다. Gradle은 동봉한 Wrapper를 사용하므로 전역 Gradle·Maven·Node.js·npm 설치는 필요하지 않습니다.
 
 터미널에서 다음 명령을 실행하고 `java`와 `javac`가 모두 버전 26인지 확인합니다.
 
@@ -24,6 +35,8 @@ javac -version
 Windows에서는 환경 변수 `JAVA_HOME`을 본인 컴퓨터에 설치한 JDK 26 폴더로 지정하고, 사용자 `Path`에 `%JAVA_HOME%\bin`을 추가합니다. `JAVA_HOME`은 `bin`의 상위 JDK 폴더입니다. 환경 변수를 변경했다면 터미널과 VS Code를 완전히 닫았다가 다시 엽니다. 저장소는 Windows 로컬 드라이브에 clone합니다. 네트워크 공유의 UNC 경로는 실행 위치로 지원하지 않습니다.
 
 명령 팔레트의 **Java: Configure Java Runtime**에서도 프로젝트 JDK를 확인합니다. 각 `build.gradle`이 Java 26을 지정하고, Gradle Wrapper가 Gradle 9.6.1을 사용합니다. 최초 실행에는 Gradle·JUnit 다운로드를 위한 인터넷 연결이 필요합니다.
+
+사용자가 직접 처리할 수 있는 단계는 프로그램 설치 권한 확인, 작업을 저장한 뒤 VS Code 재시작, Workspace Trust 결정, 본인 수강 계정의 브라우저 로그인과 **Connect to VS Code**입니다. 구체적인 메뉴와 설치 완료 기준은 [INSTALL.md](INSTALL.md)에 있습니다.
 
 ## 2. Clone하고 워크스페이스 열기
 
@@ -88,18 +101,18 @@ Windows PowerShell의 대화형 실행은 위 Windows 명령을 사용합니다.
 
 ## 5. Moodle 연결과 제출
 
-동봉한 **Moodle VPL Practice 0.6.2**를 설치하면 VS Code에서 공개 테스트·Moodle 원격 실행·제출·채점을 진행할 수 있습니다. 아래 절차는 VS Code와 브라우저를 같은 컴퓨터에서 사용하는 데스크톱 환경 기준입니다.
+동봉한 **Moodle VPL Practice 0.6.3**를 설치하면 VS Code에서 공개 테스트·Moodle 원격 실행·제출·채점을 진행할 수 있습니다. 아래 절차는 VS Code와 브라우저를 같은 컴퓨터에서 사용하는 데스크톱 환경 기준입니다.
 
 ### 확장 설치: 처음 한 번
 
 1. VS Code에서 **F1**을 누르고 `Install from VSIX`를 입력합니다.
 2. **Extensions: Install from VSIX...**를 선택합니다. 메뉴가 번역되어 검색되지 않으면 왼쪽 **Extensions** 아이콘 → **…** → **Install from VSIX...**를 선택합니다.
-3. 파일 선택 창에서 이 저장소의 [`tools/moodle-vpl-practice-0.6.2.vsix`](tools/moodle-vpl-practice-0.6.2.vsix)를 선택합니다.
-4. 설치가 끝나면 F1 → **Developer: Reload Window**를 실행합니다. F1에서 `Moodle`을 검색하여 아래 명령이 나타나는지 확인합니다. Extensions 화면에서 **Moodle VPL Practice** 버전이 **0.6.2**인지 확인할 수 있습니다.
+3. 파일 선택 창에서 이 저장소의 [`tools/moodle-vpl-practice-0.6.3.vsix`](tools/moodle-vpl-practice-0.6.3.vsix)를 선택합니다.
+4. 설치가 끝나면 F1 → **Developer: Reload Window**를 실행합니다. F1에서 `Moodle`을 검색하여 아래 명령이 나타나는지 확인합니다. Extensions 화면에서 **Moodle VPL Practice** 버전이 **0.6.3**인지 확인할 수 있습니다.
 
-터미널을 선호하면 저장소 루트에서 `code --install-extension tools/moodle-vpl-practice-0.6.2.vsix`로 설치한 뒤 창을 다시 로드해도 됩니다.
+터미널을 선호하면 저장소 루트에서 `code --install-extension tools/moodle-vpl-practice-0.6.3.vsix`로 설치한 뒤 창을 다시 로드해도 됩니다.
 
-F1에는 **Open Practice, Run Public Tests, Submit and Run on Moodle, Submit and Grade, Login, Logout** 6개만 표시합니다. 문제 설명은 Explorer의 **Moodle VPL Practices**에서 실습 항목을 클릭하면 열립니다.
+F1에는 **Download Practices, Run Public Tests, Submit and Run on Moodle, Submit and Grade, Login, Logout** 6개만 표시합니다. **0.6.3에서는 Open Practice와 새 창 자동 열기 기능을 제거했습니다.** 문제 설명은 Explorer의 **Moodle VPL Practices**에서 실습 항목을 클릭하면 열립니다. 이전 버전 사용자는 새 VSIX 설치 후 창을 다시 로드해야 합니다.
 
 ### 구현 → 테스트 → 제출·채점
 
@@ -113,11 +126,11 @@ F1에는 **Open Practice, Run Public Tests, Submit and Run on Moodle, Submit and
 
 ### 새 문제와 기존 문제 변경
 
-사이트 기본값은 `https://practice.leafmill.com`, 강좌 ID는 `4`입니다. F1 → **Moodle VPL: Open Practice**에서 추가로 공개된 문제를 선택합니다. 처음에는 실습 보관 폴더를 선택하며, 새 문제를 내려받고 해당 실습 하나를 새 창으로 엽니다. 기존에 등록된 폴더는 그대로 엽니다. 교수가 외부 실습으로 등록한 문제 중 현재 계정으로 접근 가능한 문제만 표시됩니다.
+사이트 기본값은 `https://practice.leafmill.com`, 강좌 ID는 `4`입니다. F1 → **Moodle VPL: Download Practices**에서 추가로 공개된 문제를 선택합니다. 처음에는 실습 보관 폴더를 선택하며, 새 문제를 내려받고 완료 알림에 폴더 경로를 표시합니다. 기존에 등록된 폴더는 코드를 보존하고 경로를 안내합니다. **File → Open Folder...**에서 필요한 폴더를 직접 엽니다. 교수가 외부 실습으로 등록한 문제 중 현재 계정으로 접근 가능한 문제만 표시됩니다. 이 저장소에 포함된 0201·0202·0203은 다시 다운로드할 필요가 없습니다.
 
 실습 창 상단 새로고침 버튼(**Check for Updates**)은 새 문제와 기존 문제 변경을 수동으로 확인합니다. 자동 주기 알림은 없으며, 기존 코드·테스트·예제·빌드 파일을 덮어쓰거나 삭제하지 않습니다.
 
-새 자료를 다시 받으려면 보관할 작업을 별도로 복사하고, 사용자가 기존 실습 폴더를 직접 삭제한 뒤 **Open Practice**에서 다시 다운로드합니다. 빈 폴더라도 다운로드 대상에 존재하면 거절됩니다. 실습 창 상단 **… → How to Download Again**은 이 절차만 안내합니다.
+새 자료를 다시 받으려면 보관할 작업을 별도로 복사하고, 사용자가 기존 실습 폴더를 직접 삭제한 뒤 **Download Practices**에서 다시 다운로드합니다. 빈 폴더라도 다운로드 대상에 존재하면 거절됩니다. 실습 창 상단 **… → How to Download Again**은 이 절차만 안내합니다.
 
 ## 6. 작업 파일과 문제 해결
 
