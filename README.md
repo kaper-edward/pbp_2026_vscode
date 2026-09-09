@@ -88,16 +88,16 @@ Windows PowerShell의 대화형 실행은 위 Windows 명령을 사용합니다.
 
 ## 5. Moodle 연결과 제출
 
-동봉한 **Moodle VPL Practice 0.6.1**를 설치하면 VS Code에서 공개 테스트·Moodle 원격 실행·제출·채점을 진행할 수 있습니다. 아래 절차는 VS Code와 브라우저를 같은 컴퓨터에서 사용하는 데스크톱 환경 기준입니다.
+동봉한 **Moodle VPL Practice 0.6.2**를 설치하면 VS Code에서 공개 테스트·Moodle 원격 실행·제출·채점을 진행할 수 있습니다. 아래 절차는 VS Code와 브라우저를 같은 컴퓨터에서 사용하는 데스크톱 환경 기준입니다.
 
 ### 확장 설치: 처음 한 번
 
 1. VS Code에서 **F1**을 누르고 `Install from VSIX`를 입력합니다.
 2. **Extensions: Install from VSIX...**를 선택합니다. 메뉴가 번역되어 검색되지 않으면 왼쪽 **Extensions** 아이콘 → **…** → **Install from VSIX...**를 선택합니다.
-3. 파일 선택 창에서 이 저장소의 [`tools/moodle-vpl-practice-0.6.1.vsix`](tools/moodle-vpl-practice-0.6.1.vsix)를 선택합니다.
-4. 설치가 끝나면 F1 → **Developer: Reload Window**를 실행합니다. F1에서 `Moodle`을 검색하여 아래 명령이 나타나는지 확인합니다. Extensions 화면에서 **Moodle VPL Practice** 버전이 **0.6.1**인지 확인할 수 있습니다.
+3. 파일 선택 창에서 이 저장소의 [`tools/moodle-vpl-practice-0.6.2.vsix`](tools/moodle-vpl-practice-0.6.2.vsix)를 선택합니다.
+4. 설치가 끝나면 F1 → **Developer: Reload Window**를 실행합니다. F1에서 `Moodle`을 검색하여 아래 명령이 나타나는지 확인합니다. Extensions 화면에서 **Moodle VPL Practice** 버전이 **0.6.2**인지 확인할 수 있습니다.
 
-터미널을 선호하면 저장소 루트에서 `code --install-extension tools/moodle-vpl-practice-0.6.1.vsix`로 설치한 뒤 창을 다시 로드해도 됩니다.
+터미널을 선호하면 저장소 루트에서 `code --install-extension tools/moodle-vpl-practice-0.6.2.vsix`로 설치한 뒤 창을 다시 로드해도 됩니다.
 
 F1에는 **Open Practice, Run Public Tests, Submit and Run on Moodle, Submit and Grade, Login, Logout** 6개만 표시합니다. 문제 설명은 Explorer의 **Moodle VPL Practices**에서 실습 항목을 클릭하면 열립니다.
 
