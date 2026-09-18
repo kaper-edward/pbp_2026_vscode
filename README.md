@@ -22,7 +22,7 @@ INSTALL.md를 읽고 이 저장소의 Java 26 실습환경을 구성해 주세�
 - JDK 26
 - VS Code 확장 **Extension Pack for Java**(Microsoft)
 
-**Gradle for Java**는 작업 탐색 UI를 위한 권장 확장입니다. Moodle 명령을 사용하려면 동봉한 **Moodle VPL Practice 0.6.3 VSIX**를 별도로 설치합니다. Git clone이나 추천 확장 목록만으로 Moodle 확장이 자동 설치되지는 않습니다. Gradle은 동봉한 Wrapper를 사용하므로 전역 Gradle·Maven·Node.js·npm 설치는 필요하지 않습니다.
+**Gradle for Java**는 작업 탐색 UI를 위한 권장 확장입니다. Moodle 명령을 사용하려면 동봉한 **Moodle VPL Practice 0.7.1 VSIX**를 별도로 설치합니다. Git clone이나 추천 확장 목록만으로 Moodle 확장이 자동 설치되지는 않습니다. Gradle은 동봉한 Wrapper를 사용하므로 전역 Gradle·Maven·Node.js·npm 설치는 필요하지 않습니다.
 
 터미널에서 다음 명령을 실행하고 `java`와 `javac`가 모두 버전 26인지 확인합니다.
 
@@ -101,23 +101,23 @@ Windows PowerShell의 대화형 실행은 위 Windows 명령을 사용합니다.
 
 ## 5. Moodle 연결과 제출
 
-동봉한 **Moodle VPL Practice 0.6.3**를 설치하면 VS Code에서 공개 테스트·Moodle 원격 실행·제출·채점을 진행할 수 있습니다. 아래 절차는 VS Code와 브라우저를 같은 컴퓨터에서 사용하는 데스크톱 환경 기준입니다.
+동봉한 **Moodle VPL Practice 0.7.1**을 설치하면 VS Code에서 현재 실습 다운로드·공개 테스트·Moodle 원격 실행·제출·채점을 진행할 수 있습니다. 아래 절차는 VS Code와 브라우저를 같은 컴퓨터에서 사용하는 데스크톱 환경 기준입니다.
 
 ### 확장 설치: 처음 한 번
 
 1. VS Code에서 **F1**을 누르고 `Install from VSIX`를 입력합니다.
 2. **Extensions: Install from VSIX...**를 선택합니다. 메뉴가 번역되어 검색되지 않으면 왼쪽 **Extensions** 아이콘 → **…** → **Install from VSIX...**를 선택합니다.
-3. 파일 선택 창에서 이 저장소의 [`tools/moodle-vpl-practice-0.6.3.vsix`](tools/moodle-vpl-practice-0.6.3.vsix)를 선택합니다.
-4. 설치가 끝나면 F1 → **Developer: Reload Window**를 실행합니다. F1에서 `Moodle`을 검색하여 아래 명령이 나타나는지 확인합니다. Extensions 화면에서 **Moodle VPL Practice** 버전이 **0.6.3**인지 확인할 수 있습니다.
+3. 파일 선택 창에서 이 저장소의 [`tools/moodle-vpl-practice-0.7.1.vsix`](tools/moodle-vpl-practice-0.7.1.vsix)를 선택합니다.
+4. 설치가 끝나면 F1 → **Developer: Reload Window**를 실행합니다. F1에서 `Moodle`을 검색하여 아래 명령이 나타나는지 확인합니다. Extensions 화면에서 **Moodle VPL Practice** 버전이 **0.7.1**인지 확인할 수 있습니다.
 
-터미널을 선호하면 저장소 루트에서 `code --install-extension tools/moodle-vpl-practice-0.6.3.vsix`로 설치한 뒤 창을 다시 로드해도 됩니다.
+터미널을 선호하면 저장소 루트에서 `code --install-extension tools/moodle-vpl-practice-0.7.1.vsix --force`로 설치한 뒤 창을 다시 로드해도 됩니다.
 
-F1에는 **Download Practices, Run Public Tests, Submit and Run on Moodle, Submit and Grade, Login, Logout** 6개만 표시합니다. **0.6.3에서는 Open Practice와 새 창 자동 열기 기능을 제거했습니다.** 문제 설명은 Explorer의 **Moodle VPL Practices**에서 실습 항목을 클릭하면 열립니다. 이전 버전 사용자는 새 VSIX 설치 후 창을 다시 로드해야 합니다.
+학생이 주로 사용하는 명령은 **Open Current Practice, Run Public Tests, Submit and Run on Moodle, Submit and Grade, Login, Logout**입니다. **Open Current Practice**는 서버의 현재 문제를 확인해 내려받고 해당 폴더를 새 VS Code 창에서 엽니다. 문제 설명은 Explorer의 **Moodle VPL Practices**에서 실습 항목을 클릭하면 열립니다. 이전 버전 사용자는 새 VSIX 설치 후 창을 다시 로드해야 합니다.
 
 ### 구현 → 테스트 → 제출·채점
 
-1. F1 → **Moodle VPL: Login**을 실행합니다. 열린 브라우저에서 본인 수강 계정으로 로그인하고 **Connect to VS Code**를 누릅니다. 키를 복사하거나 입력할 필요가 없으며 유효한 연결은 재사용합니다.
-2. 작업할 실습 폴더의 `src/main/java` 파일을 열고 TODO를 구현한 뒤 저장합니다. 이 저장소의 0201·0202·0203은 이미 Moodle 활동에 연결되어 있습니다.
+1. F1 → **Moodle VPL: Login**을 실행합니다. 열린 브라우저에서 본인 수강 계정으로 로그인하고 **Connect to VS Code**를 누릅니다. 키를 복사하거나 입력할 필요가 없습니다. Login을 다시 실행하면 이전 로그인 시도는 취소되고 새 연결만 적용됩니다.
+2. F1 → **Moodle VPL: Open Current Practice**에서 문제를 선택합니다. 현재 문제가 내려받아지고 해당 폴더가 새 VS Code 창에서 열립니다. `src/main/java`의 TODO를 구현한 뒤 저장합니다. 이 저장소의 0201·0202·0203은 이미 Moodle 활동에 연결되어 있습니다.
 3. F1 → **Moodle VPL: Run Public Tests**로 현재 파일의 프로젝트를 테스트합니다. 테스트는 매번 실행하며, 통과하면 PASSED, 출력 불일치로 실패하면 기대값과 실제 출력을 터미널에 표시합니다. 시작 코드는 미완성이므로 실패하는 것이 정상입니다.
 4. 서버에서 입력하며 실행하려면 F1 → **Moodle VPL: Submit and Run on Moodle**을 선택합니다. 제출 확인 후 Moodle VPL을 거쳐 실행 서버에 연결되며 VS Code 터미널에 입력합니다. 이 명령은 코드를 제출하지만 채점하지 않습니다.
 5. 채점받으려면 F1 → **Moodle VPL: Submit and Grade**를 선택하고 계정·문제·제출 파일을 확인합니다. 제출 검증 후 서버 채점까지 이어지며 결과는 Moodle VPL 출력 창에 표시됩니다. 실습 항목 우클릭 → **Open in Moodle**로 웹 제출 내역도 확인할 수 있습니다.
@@ -126,11 +126,11 @@ F1에는 **Download Practices, Run Public Tests, Submit and Run on Moodle, Submi
 
 ### 새 문제와 기존 문제 변경
 
-사이트 기본값은 `https://practice.leafmill.com`, 강좌 ID는 `4`입니다. F1 → **Moodle VPL: Download Practices**에서 추가로 공개된 문제를 선택합니다. 처음에는 실습 보관 폴더를 선택하며, 새 문제를 내려받고 완료 알림에 폴더 경로를 표시합니다. 기존에 등록된 폴더는 코드를 보존하고 경로를 안내합니다. **File → Open Folder...**에서 필요한 폴더를 직접 엽니다. 교수가 외부 실습으로 등록한 문제 중 현재 계정으로 접근 가능한 문제만 표시됩니다. 이 저장소에 포함된 0201·0202·0203은 다시 다운로드할 필요가 없습니다.
+사이트 기본값은 `https://practice.leafmill.com`, 강좌 ID는 `4`입니다. F1 → **Moodle VPL: Open Current Practice**에서 추가로 공개된 문제를 선택합니다. 처음에는 실습 보관 폴더를 선택하며, 현재 문제를 내려받고 해당 폴더를 새 VS Code 창에서 엽니다. 교수가 외부 실습으로 등록한 문제 중 현재 계정으로 접근 가능한 문제만 표시됩니다. 이 저장소에 포함된 0201·0202·0203은 다시 다운로드할 필요가 없습니다.
 
-실습 창 상단 새로고침 버튼(**Check for Updates**)은 새 문제와 기존 문제 변경을 수동으로 확인합니다. 자동 주기 알림은 없으며, 기존 코드·테스트·예제·빌드 파일을 덮어쓰거나 삭제하지 않습니다.
+실습 창 상단 새로고침 버튼(**Check for Updates**)은 새 문제와 기존 문제 변경을 수동으로 확인합니다. 자동 주기 알림은 없습니다. 문제가 변경되면 기존 폴더 전체를 같은 주차의 `.moodle-vpl-backups`로 옮기고 현재 문제를 새로 만듭니다. 시작 코드가 같으면 작성한 제출 소스를 현재 폴더에 유지하고, 시작 코드가 바뀌면 새 시작 코드를 사용합니다.
 
-새 자료를 다시 받으려면 보관할 작업을 별도로 복사하고, 사용자가 기존 실습 폴더를 직접 삭제한 뒤 **Download Practices**에서 다시 다운로드합니다. 빈 폴더라도 다운로드 대상에 존재하면 거절됩니다. 실습 창 상단 **… → How to Download Again**은 이 절차만 안내합니다.
+학생이 직접 기존 폴더를 삭제하거나 별도로 복사할 필요는 없습니다. **Open Current Practice**, 문제 설명 열기, 제출은 서버의 현재 문제를 확인합니다. 제출 직전에 변경을 발견하면 현재 문제를 먼저 만들고 제출을 중단하므로, 변경된 문제와 코드를 확인한 뒤 다시 제출합니다.
 
 ## 6. 작업 파일과 문제 해결
 
