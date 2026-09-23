@@ -11,7 +11,7 @@
 | **JDK 26** | 로컬 컴파일·실행·테스트 | `java -version`, `javac -version` 모두 26. JRE만 설치하거나 JDK 21·25로 대체하지 않음 |
 | **Extension Pack for Java** | Java 편집·프로젝트 가져오기·디버깅 | 확장 ID `vscjava.vscode-java-pack` |
 | Gradle for Java | Gradle 작업 탐색 UI 사용 시 권장 | 확장 ID `vscjava.vscode-gradle`. 터미널의 Wrapper 실행에는 필요하지 않음 |
-| **Moodle VPL Practice 0.7.1** | VS Code의 Moodle 명령 사용 | 저장소의 [VSIX](tools/moodle-vpl-practice-0.7.1.vsix)를 별도 설치 |
+| **Moodle VPL Practice 0.7.2** | VS Code의 Moodle 명령 사용 | 저장소의 [VSIX](tools/moodle-vpl-practice-0.7.2.vsix)를 별도 설치 |
 | 인터넷 연결 | 최초 의존성 다운로드·Moodle 사용 | GitHub, VS Code Marketplace, Gradle 배포 서버, Maven Central, 수업 Moodle 접속 |
 | 본인 수강 계정과 브라우저 | Moodle 로그인·제출·채점 | `https://practice.leafmill.com`의 해당 강좌 접근 권한 |
 
@@ -80,20 +80,20 @@ git clone https://github.com/kaper-edward/pbp_2026_vscode.git
 cd pbp_2026_vscode
 code --install-extension vscjava.vscode-java-pack
 code --install-extension vscjava.vscode-gradle
-code --install-extension tools/moodle-vpl-practice-0.7.1.vsix --force
+code --install-extension tools/moodle-vpl-practice-0.7.2.vsix --force
 ```
 
-`code`가 없으면 GUI로 설치할 수 있습니다. Extensions에서 Microsoft의 **Extension Pack for Java**와 **Gradle for Java**를 검색하고 설치합니다. Moodle 확장은 **F1 → Extensions: Install from VSIX...** 또는 **Extensions → … → Install from VSIX...**에서 `tools/moodle-vpl-practice-0.7.1.vsix`를 선택합니다. 저장소의 추천 확장 목록이나 Git clone만으로 Moodle VSIX가 자동 설치되지는 않습니다. [VS Code 확장 설치 안내](https://code.visualstudio.com/docs/configure/extensions/extension-marketplace)
+`code`가 없으면 GUI로 설치할 수 있습니다. Extensions에서 Microsoft의 **Extension Pack for Java**와 **Gradle for Java**를 검색하고 설치합니다. Moodle 확장은 **F1 → Extensions: Install from VSIX...** 또는 **Extensions → … → Install from VSIX...**에서 `tools/moodle-vpl-practice-0.7.2.vsix`를 선택합니다. 저장소의 추천 확장 목록이나 Git clone만으로 Moodle VSIX가 자동 설치되지는 않습니다. [VS Code 확장 설치 안내](https://code.visualstudio.com/docs/configure/extensions/extension-marketplace)
 
 이전 버전 사용자는 새 VSIX를 설치하여 갱신하고 **Developer: Reload Window**를 실행합니다. 기존 실습 폴더와 작성한 코드를 삭제할 필요는 없습니다. 여러 VS Code 프로필을 사용하면 실제 수업에 사용하는 프로필에서 설치했는지 확인합니다.
 
-Extensions 화면에서 `Moodle VPL Practice`가 **0.7.1**인지 확인하거나 아래 명령의 목록에서 `leafmill.moodle-vpl-practice@0.7.1`을 찾습니다.
+Extensions 화면에서 `Moodle VPL Practice`가 **0.7.2**인지 확인하거나 아래 명령의 목록에서 `leafmill.moodle-vpl-practice@0.7.2`을 찾습니다.
 
 ```text
 code --list-extensions --show-versions
 ```
 
-설치 파일 확인이 필요하면 저장소 루트에서 PowerShell의 `Get-FileHash tools/moodle-vpl-practice-0.7.1.vsix -Algorithm SHA256`을 실행하여 [SHA256SUMS.txt](tools/SHA256SUMS.txt)와 비교합니다. Linux에서는 `(cd tools && sha256sum -c SHA256SUMS.txt)`, macOS에서는 `(cd tools && shasum -a 256 -c SHA256SUMS.txt)`를 사용할 수 있습니다.
+설치 파일 확인이 필요하면 저장소 루트에서 PowerShell의 `Get-FileHash tools/moodle-vpl-practice-0.7.2.vsix -Algorithm SHA256`을 실행하여 [SHA256SUMS.txt](tools/SHA256SUMS.txt)와 비교합니다. Linux에서는 `(cd tools && sha256sum -c SHA256SUMS.txt)`, macOS에서는 `(cd tools && shasum -a 256 -c SHA256SUMS.txt)`를 사용할 수 있습니다.
 
 ## 4. 실습 폴더와 프로젝트 JDK 확인
 
@@ -156,7 +156,7 @@ VS Code에서도 Java 파일을 열고 **Run and Debug**에서 해당 실습을 
 | macOS·Linux에서 `./gradlew` 권한 오류 | 실습 폴더에서 `chmod +x gradlew` 후 재실행 |
 | Java 프로젝트·F5 구성을 찾지 못함 | 실습 폴더 또는 제공한 워크스페이스를 열었는지, Java 확장 설치와 프로젝트 가져오기가 완료되었는지 확인 |
 | F1에 Moodle 명령이 없음 | 활성 프로필의 VSIX 설치·사용 여부, Workspace Trust, Reload Window 확인 |
-| 이전 명령이나 화면이 계속 표시됨 | 설치 버전 0.7.1 확인 후 Reload Window. 저장소 갱신만으로 설치된 확장은 바뀌지 않음 |
+| 이전 명령이나 화면이 계속 표시됨 | 설치 버전 0.7.2 확인 후 Reload Window. 저장소 갱신만으로 설치된 확장은 바뀌지 않음 |
 | 로그인 연결이 완료되지 않음 | VS Code와 브라우저가 같은 컴퓨터인지 확인하고 Login을 다시 시작. 회사·학교의 loopback 통신 차단 여부 확인 |
 | 토큰 만료·잘못된 계정 | Login 재실행 또는 Logout 후 본인 계정으로 다시 연결 |
 | 컴파일 성공 후 공개 테스트 실패 | 미완성 TODO인지 먼저 확인. `build/reports/tests/test/index.html`의 기대값·실제 출력 확인 |
@@ -167,7 +167,7 @@ VS Code에서도 Java 파일을 열고 **Run and Debug**에서 해당 실습을 
 
 1. 이 문서와 README를 읽고 OS, 셸, 현재 작업 경로, `git status --short`, 설치된 Git·VS Code·JDK·확장 버전을 확인합니다. 기존 설치와 학생 작업을 재사용합니다.
 2. 부족한 구성 요소만 설치하고 JDK 26·PATH·프로젝트 가져오기를 설정합니다. 설치 위치는 실제 파일로 확인하며 예시 경로나 다른 PC 경로를 그대로 쓰지 않습니다.
-3. VSIX 0.7.1 설치 상태를 확인하고 세 실습의 `testClasses`를 실행합니다. GUI를 사용할 수 있으면 프로젝트 JDK·실행 구성·Moodle 명령도 확인합니다.
+3. VSIX 0.7.2 설치 상태를 확인하고 세 실습의 `testClasses`를 실행합니다. GUI를 사용할 수 있으면 프로젝트 JDK·실행 구성·Moodle 명령도 확인합니다.
 4. OS 설치 권한 요청, 기존 작업을 저장한 뒤 VS Code 재시작, 저장소 신뢰 결정, 브라우저 로그인·Connect to VS Code는 사용자 조작이 필요할 수 있습니다. 필요한 작업과 이유를 짧게 안내합니다. 실행 중인 VS Code를 임의로 강제 종료하지 않습니다.
 5. 설치 결과를 **버전·컴파일 결과·GUI 확인 여부·Moodle 연결 여부·남은 사용자 작업**으로 보고합니다. 미확인 항목을 완료로 표시하지 않습니다.
 
