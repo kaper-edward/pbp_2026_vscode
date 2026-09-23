@@ -1,6 +1,6 @@
 {
   "name": "moodle-vpl-practice",
-  "version": "0.7.4",
-  "file": "moodle-vpl-practice-0.7.4.vsix",
-  "sha256": "215b2c4db0242ab0a6fe7e05fd2d8d8f5df9d0283f93eb04fcd93ba17ce8eb46"
+  "version": "0.7.5",
+  "file": "moodle-vpl-practice-0.7.5.vsix",
+  "sha256": "94c3b614bc885339b64b53f826c9231d1dcb38aeda01800c25f4edcb321c2668"
 }

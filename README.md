@@ -22,7 +22,7 @@ INSTALL.md를 읽고 이 저장소의 Java 26 실습환경을 구성해 주세�
 - JDK 26
 - VS Code 확장 **Extension Pack for Java**(Microsoft)
 
-**Gradle for Java**는 작업 탐색 UI를 위한 권장 확장입니다. Moodle 명령을 사용하려면 동봉한 **Moodle VPL Practice 0.7.4 VSIX**를 별도로 설치합니다. Git clone이나 추천 확장 목록만으로 Moodle 확장이 자동 설치되지는 않습니다. Gradle은 동봉한 Wrapper를 사용하므로 전역 Gradle·Maven·Node.js·npm 설치는 필요하지 않습니다.
+**Gradle for Java**는 작업 탐색 UI를 위한 권장 확장입니다. Moodle 명령을 사용하려면 동봉한 **Moodle VPL Practice 0.7.5 VSIX**를 별도로 설치합니다. Git clone이나 추천 확장 목록만으로 Moodle 확장이 자동 설치되지는 않습니다. Gradle은 동봉한 Wrapper를 사용하므로 전역 Gradle·Maven·Node.js·npm 설치는 필요하지 않습니다.
 
 터미널에서 다음 명령을 실행하고 `java`와 `javac`가 모두 버전 26인지 확인합니다.
 
@@ -101,16 +101,16 @@ Windows PowerShell의 대화형 실행은 위 Windows 명령을 사용합니다.
 
 ## 5. Moodle 연결과 제출
 
-동봉한 **Moodle VPL Practice 0.7.4**을 설치하면 VS Code에서 현재 실습 다운로드·공개 테스트·Moodle 원격 실행·제출·채점을 진행할 수 있습니다. 아래 절차는 VS Code와 브라우저를 같은 컴퓨터에서 사용하는 데스크톱 환경 기준입니다.
+동봉한 **Moodle VPL Practice 0.7.5**을 설치하면 VS Code에서 현재 실습 다운로드·공개 테스트·Moodle 원격 실행·제출·채점을 진행할 수 있습니다. 아래 절차는 VS Code와 브라우저를 같은 컴퓨터에서 사용하는 데스크톱 환경 기준입니다.
 
 ### 확장 설치: 처음 한 번
 
 1. VS Code에서 **F1**을 누르고 `Install from VSIX`를 입력합니다.
 2. **Extensions: Install from VSIX...**를 선택합니다. 메뉴가 번역되어 검색되지 않으면 왼쪽 **Extensions** 아이콘 → **…** → **Install from VSIX...**를 선택합니다.
-3. 파일 선택 창에서 이 저장소의 [`tools/moodle-vpl-practice-0.7.4.vsix`](tools/moodle-vpl-practice-0.7.4.vsix)를 선택합니다.
-4. 설치가 끝나면 F1 → **Developer: Reload Window**를 실행합니다. F1에서 `Moodle`을 검색하여 아래 명령이 나타나는지 확인합니다. Extensions 화면에서 **Moodle VPL Practice** 버전이 **0.7.4**인지 확인할 수 있습니다.
+3. 파일 선택 창에서 이 저장소의 [`tools/moodle-vpl-practice-0.7.5.vsix`](tools/moodle-vpl-practice-0.7.5.vsix)를 선택합니다.
+4. 설치가 끝나면 F1 → **Developer: Reload Window**를 실행합니다. F1에서 `Moodle`을 검색하여 아래 명령이 나타나는지 확인합니다. Extensions 화면에서 **Moodle VPL Practice** 버전이 **0.7.5**인지 확인할 수 있습니다.
 
-터미널을 선호하면 저장소 루트에서 `code --install-extension tools/moodle-vpl-practice-0.7.4.vsix --force`로 설치한 뒤 창을 다시 로드해도 됩니다.
+터미널을 선호하면 저장소 루트에서 `code --install-extension tools/moodle-vpl-practice-0.7.5.vsix --force`로 설치한 뒤 창을 다시 로드해도 됩니다.
 
 학생이 주로 사용하는 명령은 **Open Current Practice, Run Public Tests, Submit and Run on Moodle, Submit and Grade, Login, Logout**입니다. **Open Current Practice**는 서버의 현재 문제를 확인해 내려받고 해당 폴더를 새 VS Code 창에서 엽니다. 문제 설명은 Explorer의 **Moodle VPL Practices**에서 실습 항목을 클릭하면 열립니다. 이전 버전 사용자는 새 VSIX 설치 후 창을 다시 로드해야 합니다.
 
@@ -130,7 +130,7 @@ Windows PowerShell의 대화형 실행은 위 Windows 명령을 사용합니다.
 
 실습 창 상단 새로고침 버튼(**Check for Updates**)은 확장 새 버전(GitHub의 `tools/latest.json`), 변경된 문제, 새 문제를 한 목록에 보여 줍니다. 항목을 확인하고 **OK**를 누르면 한 번에 갱신하며, 진행 상황은 오른쪽 아래 알림 하나에 `(3/7)`처럼 표시합니다. 확장 새 버전이 있으면 먼저 설치하고, **Reload Window** 뒤 선택한 문제 갱신을 이어서 진행합니다. VS Code를 시작할 때 하루 한 번 확인해 알림만 표시하며, 목록을 확인하기 전에는 파일을 바꾸지 않습니다. 문제가 변경되면 기존 폴더 전체를 같은 주차의 `.moodle-vpl-backups`로 옮기고 현재 문제를 새로 만듭니다. 시작 코드가 같으면 작성한 제출 소스를 현재 폴더에 유지하고, 시작 코드가 바뀌면 새 시작 코드를 사용합니다.
 
-Java 파일이 `package edu.pnu.pbp;`처럼 패키지(package)를 선언하면 0.7.4부터 `src/main/java/edu/pnu/pbp/`처럼 패키지 이름과 같은 폴더에 받습니다. 제출할 때는 Moodle에 파일 이름만 보내므로 폴더 위치를 옮길 필요가 없습니다.
+Java 파일이 `package edu.pnu.pbp;`처럼 패키지(package)를 선언하면 0.7.5부터 `src/main/java/edu/pnu/pbp/`처럼 패키지 이름과 같은 폴더에 받습니다. 제출할 때는 Moodle에 파일 이름만 보내므로 폴더 위치를 옮길 필요가 없습니다.
 
 학생이 직접 기존 폴더를 삭제하거나 별도로 복사할 필요는 없습니다. **Open Current Practice**, 문제 설명 열기, 제출은 서버의 현재 문제를 확인합니다. 제출 직전에 변경을 발견하면 현재 문제를 먼저 만들고 제출을 중단하므로, 변경된 문제와 코드를 확인한 뒤 다시 제출합니다.
 
